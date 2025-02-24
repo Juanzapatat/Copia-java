@@ -12,7 +12,7 @@ public class Main {
         expenseControl();
         // Falta enlazar los metodos
     }
-
+ //FUNCIONAL
     // INICIO DEL METODO DEL LOGIN
     public static void Login() {
 
@@ -55,6 +55,8 @@ public class Main {
     }
     // FIN DEL LOGIN
 
+
+//FUNCIONAL 
     // INICIO DE LA INTERFAZ- PANEL DE CONTROL
     public static void panelCotrol() {
         Scanner panelControl = new Scanner(System.in);
@@ -93,7 +95,7 @@ public class Main {
     }
 
 
-    //********************* PROBLEMAS ACA EN EL CASE 2, NO DEJA REVISAR EL REGISTRO 
+    //FUNCIONAL 
     // INICIO DE REGISTRO FACTURAS ( Billing record=Registro de facturas )
     public static void billingRecord() {
 
@@ -176,10 +178,11 @@ public class Main {
                 case 2 :
                     // Un for donde recorra el arrayList y eitere en el cada iten y se muestre
                     for (int i = 0; i < keepRecord.size(); i++) {
-                        System.out.println(keepRecord.get(i));
-                        System.out.println(keepRecord.get(1));
-                        System.out.println(keepRecord.get(2));
-                        System.out.println("SDKSDKSDSDKSDKSD" + keepRecord.get(3));
+                        System.out.println("Descripción :" + keepRecord.get(0));
+                        System.out.println("Valor :" + keepRecord.get(1));
+                        System.out.println("IVA: " +keepRecord.get(2));
+                        System.out.println("Fecha : " + keepRecord.get(3));
+                        System.out.println("Consumidor Final : " + keepRecord.get(4));
 
                     }
                     break;
@@ -198,6 +201,7 @@ public class Main {
         }
     }
     // FIN DEL billingRecord
+
 
     // INICIO DE CONTROL DE GASTOS (expenseControl = control de gastos)
     public static void expenseControl() {
@@ -230,10 +234,10 @@ public class Main {
             switch (option) {
                 case 1:
                     System.out.println("Ingrese un breve descripcion del Gasto : ");
-                    String description = expenseControl.nextLine();
+                    String description = expenseControl.next();
                     viewControl.add(description);
 
-                    System.out.println("Ingrese el valor del gasto ");
+                    System.out.println("Ingrese el valor del gasto :  ");
                     double value = expenseControl.nextDouble();
                     viewControl.add(value);
 
@@ -249,6 +253,7 @@ public class Main {
                     // Mostramos aca mensaje informativo
                     System.out.println("Registro guardado exitosamnete");
                     System.out.println("Tu saldo restante es de : " + saldo);
+                    return;
 
                 case 2:
                     // LO MISMO PREGUNTAR POR EL ARRAYLIST
@@ -262,11 +267,12 @@ public class Main {
                     // Mensaje informativo
                     System.out.println("Saldo recargado correctamente  ");
                     System.out.println("Tu nuevo saldo es de : " + saldo);
+                    
 
-                    break; // OJO EXAMINAR ESTO
+                    break; 
 
                     case 3 : 
-                    expenseControl();
+                    panelCotrol();
 
                 default:
                     System.out.println("Opción no válida");
