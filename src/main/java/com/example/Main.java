@@ -163,11 +163,11 @@ public class Main {
 
                     if(answer.equalsIgnoreCase("si")){
                         System.out.println("Tu registro fue guardado exitosamente ");
-                        billingRecord();
+                    
 
                     } else if(answer.equalsIgnoreCase("no")){
                         System.out.println("Tus datos no serán  guardaros");
-                        billingRecord();
+                    
 
                     }
 
@@ -177,7 +177,10 @@ public class Main {
                     // Un for donde recorra el arrayList y eitere en el cada iten y se muestre
                     for (int i = 0; i < keepRecord.size(); i++) {
                         System.out.println(keepRecord.get(i));
-                    
+                        System.out.println(keepRecord.get(1));
+                        System.out.println(keepRecord.get(2));
+                        System.out.println("SDKSDKSDSDKSDKSD" + keepRecord.get(3));
+
                     }
                     break;
                 
