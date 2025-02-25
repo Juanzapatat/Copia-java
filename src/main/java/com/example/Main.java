@@ -216,6 +216,7 @@ public class Main {
         System.out.println("Ingresa el saldo inicial ");
         saldo = expenseControl.nextDouble();
         viewControl.add(saldo);
+        
 
         // Creo un bucle while para tener un menú
         while (true) {
@@ -249,11 +250,12 @@ public class Main {
                         saldo -= value;
                         // PREGUNTAR SI ES NECESARIO TENER PRESENTE NUEVAMENTE EL ARRAYLIST
                     }
-
+                    
                     // Mostramos aca mensaje informativo
                     System.out.println("Registro guardado exitosamnete");
                     System.out.println("Tu saldo restante es de : " + saldo);
-                    return;
+                    break;
+
 
                 case 2:
                     // LO MISMO PREGUNTAR POR EL ARRAYLIST
@@ -267,24 +269,29 @@ public class Main {
                     // Mensaje informativo
                     System.out.println("Saldo recargado correctamente  ");
                     System.out.println("Tu nuevo saldo es de : " + saldo);
-                    
+                    break;
 
-                    break; 
+                    
+                
 
                     case 3 : 
                     panelCotrol();
-
-                default:
+                    
+                    default:
                     System.out.println("Opción no válida");
                     // MIRAR ACA TAMBIEN COMO SERA EL FLUJO
+                    
+                    
+               
+            
 
+                }
             }
-
-            expenseControl.close();
         }
+    }
+
        
 
-    }
+    
     // FIN DEL EXPENSECONTROL
 
-}
